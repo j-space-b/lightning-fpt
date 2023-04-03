@@ -1,4 +1,4 @@
-# FORMMATING, LINTING, TESTING, STATIC TYPE CHECKING, COVERAGE
+ruff
 black
 pytest
 mypy
@@ -6,4 +6,3 @@ bandit
 coverage
 pre-commit
 isort
-ruff

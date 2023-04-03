@@ -1,3 +1,2 @@
-# pytorch lightning, lightning app, torchmetrics, pytorch core
-lightning
-torch
+lightning >= 2.0
+torch >= 2.0
