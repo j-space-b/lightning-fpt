@@ -6,4 +6,4 @@ href="https://lightning.ai" ><img src ="https://img.shields.io/badge/-Lightning-
 
 ## Overview
 
-Lightning Pod LLM's focus is to help familiarize with the basics of LLMs.
+Lightning Pod LLM will help to familiarize with the basics of LLMs.
