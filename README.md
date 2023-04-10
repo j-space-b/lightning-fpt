@@ -1,4 +1,4 @@
-# Lightning Pod Large Language Models
+# LAI Lit-LLaMA
 
 <a
 href="https://lightning.ai" ><img src ="https://img.shields.io/badge/-Lightning-792ee5?logo=pytorchlightning&logoColor=white" height="28"/>
@@ -6,4 +6,4 @@ href="https://lightning.ai" ><img src ="https://img.shields.io/badge/-Lightning-
 
 ## Overview
 
-Lightning Pod LLM will help to familiarize with the basics of LLMs.
+LAI Lit-LLaMA will help to familiarize with the basics of Lightning's implementation of LLaMA – Lit-LLaMA, and understand key tasks such as pre-training, quantization, sparsification, and fine-tuning.
