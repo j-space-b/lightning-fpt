@@ -23,7 +23,7 @@ line-length = 120
 
 [tool.isort]
 known_first_party = [
-    "llm_pod",
+    "lightning_pod",
 ]
 profile = "black"
 line_length = 120
@@ -52,7 +52,7 @@ ignore-init-module-imports = true
 max-complexity = 10
 
 [tool.mypy]
-files = ["llm_pod"]
+files = ["lightning_pod"]
 install_types = true
 non_interactive = true
 disallow_untyped_defs = true
@@ -71,6 +71,6 @@ warn_no_return = "False"
 # because lightning already defines types
 [[tool.mypy.overrides]]
 module = [
-    "llm_pod.core.module",
+    "lightning_pod.core.module",
 ]
 ignore_errors = true
