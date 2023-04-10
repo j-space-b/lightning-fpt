@@ -6,4 +6,4 @@ href="https://lightning.ai" ><img src ="https://img.shields.io/badge/-Lightning-
 
 ## Overview
 
-LAI Lit-LLaMA will help to familiarize with the basics of Lightning's implementation of LLaMA – Lit-LLaMA, and understand key tasks such as pre-training, quantization, sparsification, and fine-tuning.
+LAI Lit-LLaMA will help to familiarize with the basics of Lightning's implementation of LLaMA – [Lit-LLaMA](https://github.com/Lightning-AI/lit-llama), and understand key tasks such as pre-training, quantization, sparsification, and fine-tuning.
