@@ -1,11 +1,41 @@
-# Lightning GT
+# Lightning FPT (Finetuning Pre-Trained Transformers)
 
-<a
-href="https://lightning.ai" ><img src ="https://img.shields.io/badge/-Lightning-792ee5?logo=pytorchlightning&logoColor=white" height="28"/>
-</a>
+Lightning FPT is focused on [Lightning AI's](https://lightning.ai) implemenations of LLaMA, Falcon, Pythia, and INCITE, based on nanoGPT:
 
-## Overview
+- [Lit-Parrot](https://github.com/Lightning-AI/lit-parrot)
+- [Lit-LLaMA](https://github.com/Lightning-AI/lit-llama)
 
-Lightning GT is a place for me to hack on Lightning's LLMs, [Lit-LLaMA](https://github.com/Lightning-AI/lit-llama) and [Lit-Parrot](https://github.com/Lightning-AI/lit-parrot).
+## Toolkit
 
+### Frameworks
 
+- [PyTorch](https://pytorch.org/docs/stable/index.html)
+- [Lightning](https://github.com/Lightning-AI/lightning)
+- [SheepRL](https://github.com/Eclectic-Sheep/sheeprl)
+
+### Pretrained weights
+
+- [Falcon](https://huggingface.co/tiiuae/falcon-40b)
+- [OpenLLaMA](https://github.com/openlm-research/open_llama)
+
+### Instruction Tuning Dataset
+
+- [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca)
+
+### Parameter Efficient Finetuning
+
+- [LLaMA-Adapter](https://github.com/OpenGVLab/LLaMA-Adapter)
+- [LoRA](https://github.com/microsoft/LoRA)
+
+### Evaluation Harnesses:
+
+- Lightning AI's [lm-evaluation-harness](https://github.com/Lightning-AI/lm-evaluation-harness)
+- Eleuther AI's [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)
+
+## Tutorials and References
+
+- [Understanding Large Language Models](https://magazine.sebastianraschka.com/p/understanding-large-language-models)
+- [Finetuning Falcon LLMs More Efficiently With LoRA and Adapters](https://lightning.ai/pages/community/finetuning-falcon-efficiently/)
+- [Understanding Parameter-Efficient Finetuning](https://lightning.ai/pages/community/article/understanding-llama-adapters/)
+- [Parameter-Efficient LLM Finetuning With LoRA](https://lightning.ai/pages/community/tutorial/lora-llm/)
+- [Accelerating Large Language Models with Mixed-Precision Techniques](https://lightning.ai/pages/community/tutorial/accelerating-large-language-models-with-mixed-precision-techniques/)
