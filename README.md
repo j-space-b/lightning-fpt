@@ -41,14 +41,14 @@ Listed below are the frameworks, weights, and datasets used by this repo.
 
 First, [fork this repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository), then [clone this repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository) with the following command:
 
+> **Note**
+>
+> the following assumes you have a directory named `Developer`
+
 ```sh
 cd Developer
 git clone https://github.com/{{YOUR GITHUB USERNAME}}/lightning-fpt.git
 ```
-
-> **Note**
->
-> the assumes you have a directory named `Developer`
 
 Then navigate to the clone and create a directory named `sub` and navigate to that new directory with:
 
