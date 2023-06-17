@@ -193,6 +193,11 @@ Next, create virtual environments for each tool.
    >
    > if on a mac, be sure to set the MPS fallback
 
+   > **Note**
+   >
+   > as of 17 June 2023, the command shown for mac is not working on an M2 Pro with
+   > 10‑core CPU, 16‑core GPU, 16‑core Neural Engine, and 32gb UM
+
    ```sh
    # if on a mac, set the mps fallback
    export PYTORCH_ENABLE_MPS_FALLBACK=1
