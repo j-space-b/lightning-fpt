@@ -122,6 +122,14 @@ Next, create virtual environments for each tool.
    python3 -m venv .venv
    source .venv/bin/activate
    ```
+   
+   If you have Python 3.11 or later as system Python, but have [homebrew](https://brew.sh/) installed, you can install Python 3.10 and then create the venv with:
+
+   ```sh
+   brew install python@3.10
+   python3.10 -m venv .venv
+   source .venv/bin/activate
+   ```
 
    If you have Python 3.11 or later as system Python, but have [conda](https://docs.conda.io/en/latest/) or [miniconda](https://docs.conda.io/en/latest/miniconda.html) installed, create the conda env with:
 
