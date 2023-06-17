@@ -226,6 +226,7 @@ Next, create virtual environments for each tool.
 ## Tutorials and References
 
 - [Understanding Large Language Models](https://magazine.sebastianraschka.com/p/understanding-large-language-models)
+- [Understanding Encoder And Decoder LLMs](https://magazine.sebastianraschka.com/p/understanding-encoder-and-decoder)
 - [Finetuning Falcon LLMs More Efficiently With LoRA and Adapters](https://lightning.ai/pages/community/finetuning-falcon-efficiently/)
 - [Understanding Parameter-Efficient Finetuning](https://lightning.ai/pages/community/article/understanding-llama-adapters/)
 - [Parameter-Efficient LLM Finetuning With LoRA](https://lightning.ai/pages/community/tutorial/lora-llm/)
