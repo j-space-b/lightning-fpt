@@ -113,7 +113,7 @@ Next, create virtual environments for each tool.
 
    > **Note**
    >
-   > SheepRL's requires a Python version less than 3.11 and greater than or equal to 3.8.
+   > SheepRL requires a Python version less than 3.11 and greater than or equal to 3.8.
 
    If you have Python 3.10, 3.9, or 3.8 as system Python, you can create and activate a virtual environment with:
 
