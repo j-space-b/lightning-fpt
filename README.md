@@ -195,8 +195,12 @@ Next, create virtual environments for each tool.
 
    > **Note**
    >
-   > as of 17 June 2023, the command shown for mac is not working on an M2 Pro with
-   > 10‑core CPU, 16‑core GPU, 16‑core Neural Engine, and 32gb UM
+   > as of June 2023, the command shown for mac is not working on an M2 Pro with
+   > 10‑core CPU, 16‑core GPU, 16‑core Neural Engine and 32gb UM
+
+   > **Warning**
+   > 
+   > IF ON A MAC WITH THE ABOVE SPECS OR LESS, DO NOT ATTEMPT TO RUN MORE THAN ONE FINETUNING SESSION AT A TIME
 
    ```sh
    # if on a mac, set the mps fallback
