@@ -105,7 +105,7 @@ Next, create virtual environments for each tool.
    cd ../lit-llama
    python3 -m venv .venv
    source .venv/bin/activate
-   pip install -r requirements
+   pip install -r requirements.txt
    deactivate
    ```
 
