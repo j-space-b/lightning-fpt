@@ -1,4 +1,4 @@
-# Lightning FPT (Finetuning Pre-Trained Transformers)
+# Lightning FPT (Finetuning Pretrained Transformers)
 
 Lightning FPT is focused on [Lightning AI's](https://lightning.ai) LLM implementations shown below:
 
@@ -73,43 +73,9 @@ then, navigate back to the project root with:
 cd ..
 ```
 
-Next, create virtual environments for each tool.
+Next, create a virtual environment and install each tool.
 
-1. install an editable version of lightning_fpt with dev extras
-
-   ```sh
-   python3 -m venv .venv
-   source .venv/bin/activate
-   pip install -e ".[dev]"
-   deactivate
-   ```
-
-2. setup lit-parrot:
-
-   ```sh
-   cd sub/lit-parrot
-   python3 -m venv .venv
-   source .venv/bin/activate
-   # if on CUDA, do
-   pip install --index-url https://download.pytorch.org/whl/nightly/cu118 --pre 'torch>=2.1.0dev'
-   # else, if on CPU (including macOS)
-   pip install --index-url https://download.pytorch.org/whl/nightly/cpu --pre 'torch>=2.1.0dev'
-   # complete the install if on CUDA or mac
-   pip install -r requirements.txt
-   deactivate
-   ```
-
-3. setup lit-llama:
-
-   ```sh
-   cd ../lit-llama
-   python3 -m venv .venv
-   source .venv/bin/activate
-   pip install -r requirements.txt
-   deactivate
-   ```
-
-4. setup SheepRL:
+0. Create
 
    > **Note**
    >
@@ -118,11 +84,10 @@ Next, create virtual environments for each tool.
    If you have Python 3.10, 3.9, or 3.8 as system Python, you can create and activate a virtual environment with:
 
    ```sh
-   cd ../sheeprl
    python3 -m venv .venv
    source .venv/bin/activate
    ```
-   
+
    If you have Python 3.11 or later as system Python, but have [homebrew](https://brew.sh/) installed, you can install Python 3.10 and then create the venv with:
 
    ```sh
@@ -138,14 +103,41 @@ Next, create virtual environments for each tool.
    conda activate srl
    ```
 
-   Regardless of whether you used venv or conda to create a virtual environment, you can use pip to install the requirements with the following steps.
+   > **Note**
+   >
+   > ensure your venv or conda env is activate before proceeding
+
+   > **Note**
+   >
+   > the example uses pip regardless of if you've created your env with venv or conda
+
+1. install an editable version of lightning_fpt with dev extras
 
    ```sh
-   pip install .
-   # call the Click CLI without any args
-   sheeprl
-   # deactivate the env
-   deactivate
+   pip install -e ".[dev]"
+   ```
+
+2. setup lit-parrot:
+
+   ```sh
+   # if on CUDA, do
+   pip install --index-url https://download.pytorch.org/whl/nightly/cu118 --pre 'torch>=2.1.0dev'
+   # else, if on CPU (including macOS)
+   pip install --index-url https://download.pytorch.org/whl/nightly/cpu --pre 'torch>=2.1.0dev'
+   # complete the install if on CUDA or mac
+   pip install -r sub/lit-parrot/requirements.txt
+   ```
+
+3. setup lit-llama:
+
+   ```sh
+   pip install -r sub/lit-llama/requirements.txt
+   ```
+
+4. setup SheepRL:
+
+   ```sh
+   pip install sub/sheeprl
    ```
 
    > **Note**
@@ -160,26 +152,21 @@ Next, create virtual environments for each tool.
    # then, do
    brew install swig
    # then attempt to pip install again
-   pip install .
+   pip install sub/sheeprl
    ```
 
 5. Install lm-evaluation-harness
 
    ```sh
-   cd ../lm-evaluation-harness
-   python3 -m venv .venv
-   source .venv/bin/activate
    # install with gptq extra to support lit-parrot triton kernels
-   pip install ".[gptq]"
-   deactivate
+   pip install "sub/lm-evaluation-harness[gptq]"
    ```
 
 6. Download and convert Falcon Weights
 
    ```sh
-   # navigate to lit-parrot
-   cd ../lit-parrot
-   source .venv/bin/activate
+   # must be in sub/lit-parrot
+   cd sub/lit-parrot
    # download
    python3 scripts/download.py --repo_id tiiuae/falcon-7b
    # convert
@@ -189,8 +176,7 @@ Next, create virtual environments for each tool.
 7. Prepare the Alpaca dataset
 
    ```sh
-   # remain in lit-parrot
-   python3 scripts/prepare_alpaca.py \
+    python3 scripts/prepare_alpaca.py \
         --destination_path data/alpaca \
         --checkpoint_dir checkpoints/tiiuae/falcon-7b
    ```
@@ -207,7 +193,7 @@ Next, create virtual environments for each tool.
    > 10‑core CPU, 16‑core GPU, 16‑core Neural Engine and 32gb UM
 
    > **Warning**
-   > 
+   >
    > IF ON A MAC WITH THE ABOVE SPECS OR LESS, DO NOT ATTEMPT TO RUN MORE THAN ONE FINETUNING SESSION AT A TIME
 
    ```sh
@@ -215,15 +201,15 @@ Next, create virtual environments for each tool.
    export PYTORCH_ENABLE_MPS_FALLBACK=1
    # finetune
    # if on CUDA, do
-   python3 finetune/adapter_v2.py \
-        --data_dir data/alpaca  \
-        --checkpoint_dir checkpoints/tiiuae/falcon-7b \
-        --out_dir out/adapter/alpaca
+   python3 sub/lit-parrot/finetune/adapter_v2.py \
+        --data_dir sub/lit-parrot/data/alpaca  \
+        --checkpoint_dir sub/lit-parrot/checkpoints/tiiuae/falcon-7b \
+        --out_dir sub/lit-parrot/out/adapter/alpaca
    # if on mac, do
-   python3 finetune/adapter_v2.py \
-        --data_dir data/alpaca  \
-        --checkpoint_dir checkpoints/tiiuae/falcon-7b \
-        --out_dir out/adapter/alpaca
+   python3 sub/lit-parrot/finetune/adapter_v2.py \
+        --data_dir sub/lit-parrot/data/alpaca  \
+        --checkpoint_dir sub/lit-parrot/checkpoints/tiiuae/falcon-7b \
+        --out_dir sub/lit-parrot/out/adapter/alpaca
         --precision 32-true
    ```
 
