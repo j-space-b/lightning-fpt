@@ -94,6 +94,7 @@ Next, create virtual environments for each tool.
    pip install --index-url https://download.pytorch.org/whl/nightly/cu118 --pre 'torch>=2.1.0dev'
    # else, if on CPU (including macOS)
    pip install --index-url https://download.pytorch.org/whl/nightly/cpu --pre 'torch>=2.1.0dev'
+   # complete the install if on CUDA or mac
    pip install -r requirements.txt
    deactivate
    ```
