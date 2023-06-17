@@ -196,11 +196,22 @@ Next, create virtual environments for each tool.
    # if on a mac, set the mps fallback
    export PYTORCH_ENABLE_MPS_FALLBACK=1
    # finetune
+   # if on CUDA, do
    python3 finetune/adapter_v2.py \
         --data_dir data/alpaca  \
         --checkpoint_dir checkpoints/tiiuae/falcon-7b \
         --out_dir out/adapter/alpaca
+   # if on mac, do
+   python3 finetune/adapter_v2.py \
+        --data_dir data/alpaca  \
+        --checkpoint_dir checkpoints/tiiuae/falcon-7b \
+        --out_dir out/adapter/alpaca
+        --precision 32-true
    ```
+
+   Available finetuning arguments
+
+   ![](docs/parrot-help.png)
 
 ## Tutorials and References
 
