@@ -1,6 +1,6 @@
 # Lightning FPT (Finetuning Pre-Trained Transformers)
 
-Lightning FPT is focused on [Lightning AI's](https://lightning.ai) LLM implemenations shown below:
+Lightning FPT is focused on [Lightning AI's](https://lightning.ai) LLM implementations shown below:
 
 - [Lit-Parrot](https://github.com/Lightning-AI/lit-parrot)
 - [Lit-LLaMA](https://github.com/Lightning-AI/lit-llama)
