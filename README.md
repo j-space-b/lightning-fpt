@@ -43,7 +43,7 @@ First, [fork this repo](https://docs.github.com/en/get-started/quickstart/fork-a
 
 ```sh
 cd Developer
-git clone https://github.com/JustinGoheen/lightning-fpt.git
+git clone https://github.com/{{YOUR GITHUB USERNAME}}/lightning-fpt.git
 ```
 
 > **Note**
