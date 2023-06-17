@@ -20,9 +20,9 @@ rootdir = Path(__file__).parent
 long_description = (rootdir / "README.md").read_text()
 
 setup(
-    name="lightning_pod",
+    name="lightning_fpt",
     package_dir={"": "src"},
-    packages=["lightning_pod"],
+    packages=["lightning_fpt"],
     version="0.0.1",
     description="",
     long_description=long_description,
