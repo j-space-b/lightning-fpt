@@ -117,7 +117,7 @@ Next, create a virtual environment and install each tool.
    pip install -e ".[dev]"
    ```
 
-2. setup lit-parrot:
+2. install lit-parrot requirements:
 
    ```sh
    # if on CUDA, do
@@ -128,13 +128,13 @@ Next, create a virtual environment and install each tool.
    pip install -r sub/lit-parrot/requirements.txt
    ```
 
-3. setup lit-llama:
+3. install lit-llama requirements:
 
    ```sh
    pip install -r sub/lit-llama/requirements.txt
    ```
 
-4. setup SheepRL:
+4. install SheepRL:
 
    ```sh
    pip install sub/sheeprl
@@ -155,14 +155,13 @@ Next, create a virtual environment and install each tool.
    pip install sub/sheeprl
    ```
 
-5. Install lm-evaluation-harness
+5. install lm-evaluation-harness with gptq extra to support lit-parrot triton kernels
 
    ```sh
-   # install with gptq extra to support lit-parrot triton kernels
    pip install "sub/lm-evaluation-harness[gptq]"
    ```
 
-6. Download and convert Falcon Weights
+6. download and convert Falcon weights
 
    ```sh
    # must be in sub/lit-parrot
@@ -173,7 +172,7 @@ Next, create a virtual environment and install each tool.
    python3 scripts/convert_hf_checkpoint.py --checkpoint_dir checkpoints/tiiuae/falcon-7b
    ```
 
-7. Prepare the Alpaca dataset
+7. prepare the Alpaca dataset
 
    ```sh
     python3 scripts/prepare_alpaca.py \
@@ -181,7 +180,7 @@ Next, create a virtual environment and install each tool.
         --checkpoint_dir checkpoints/tiiuae/falcon-7b
    ```
 
-8. Finetune
+8. finetune
 
    > **Note**
    >
@@ -201,15 +200,15 @@ Next, create a virtual environment and install each tool.
    export PYTORCH_ENABLE_MPS_FALLBACK=1
    # finetune
    # if on CUDA, do
-   python3 sub/lit-parrot/finetune/adapter_v2.py \
-        --data_dir sub/lit-parrot/data/alpaca  \
-        --checkpoint_dir sub/lit-parrot/checkpoints/tiiuae/falcon-7b \
-        --out_dir sub/lit-parrot/out/adapter/alpaca
-   # if on mac, do
-   python3 sub/lit-parrot/finetune/adapter_v2.py \
-        --data_dir sub/lit-parrot/data/alpaca  \
-        --checkpoint_dir sub/lit-parrot/checkpoints/tiiuae/falcon-7b \
-        --out_dir sub/lit-parrot/out/adapter/alpaca
+   python3 finetune/adapter_v2.py \
+        --data_dir data/alpaca  \
+        --checkpoint_dir checkpoints/tiiuae/falcon-7b \
+        --out_dir out/adapter/alpaca
+   # if on mac, try
+   python3 finetune/adapter_v2.py \
+        --data_dir data/alpaca  \
+        --checkpoint_dir checkpoints/tiiuae/falcon-7b \
+        --out_dir out/adapter/alpaca
         --precision 32-true
    ```
 
