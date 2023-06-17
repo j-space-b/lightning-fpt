@@ -225,6 +225,7 @@ Next, create virtual environments for each tool.
 
 ## Tutorials and References
 
+- [Self-attention and transformer networks](https://sebastianraschka.com/blog/2021/dl-course.html#l19-self-attention-and-transformer-networks)
 - [Understanding Large Language Models](https://magazine.sebastianraschka.com/p/understanding-large-language-models)
 - [Understanding Encoder And Decoder LLMs](https://magazine.sebastianraschka.com/p/understanding-encoder-and-decoder)
 - [Finetuning Falcon LLMs More Efficiently With LoRA and Adapters](https://lightning.ai/pages/community/finetuning-falcon-efficiently/)
@@ -233,3 +234,5 @@ Next, create virtual environments for each tool.
 - [Accelerating Large Language Models with Mixed-Precision Techniques](https://lightning.ai/pages/community/tutorial/accelerating-large-language-models-with-mixed-precision-techniques/)
 - [Falcon – A guide to Finetuning and Inference](https://lightning.ai/pages/blog/falcon-a-guide-to-finetune-and-inference/)
 - [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](https://arxiv.org/abs/2210.17323)
+- [Ch 16 of Machine Learning with PyTorch and Scikit-Learn](https://github.com/rasbt/machine-learning-book/tree/main/ch16)
+- [Andrej Karpathy's: Let's build GPT from scratch](https://youtu.be/kCc8FmEb1nY)
