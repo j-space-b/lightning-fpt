@@ -175,9 +175,11 @@ Next, create a virtual environment and install each tool.
 7. prepare the Alpaca dataset
 
    ```sh
-    python3 scripts/prepare_alpaca.py \
-        --destination_path data/alpaca \
-        --checkpoint_dir checkpoints/tiiuae/falcon-7b
+    # naivgate back to project root
+    cd .. && cd ..
+    python3 sub/lit-parrot/scripts/prepare_alpaca.py \
+        --destination_path sub/lit-parrot/data/alpaca \
+        --checkpoint_dir sub/lit-parrot/checkpoints/tiiuae/falcon-7b
    ```
 
 8. finetune
@@ -209,7 +211,7 @@ Next, create a virtual environment and install each tool.
         --data_dir data/alpaca  \
         --checkpoint_dir checkpoints/tiiuae/falcon-7b \
         --out_dir out/adapter/alpaca
-        --precision 32-true
+        --precision 16-mixed
    ```
 
    Available finetuning arguments
