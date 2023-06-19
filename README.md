@@ -7,7 +7,7 @@ Lightning FPT is focused on [Lightning AI's](https://lightning.ai) LLM implement
 
 ## Frameworks, Weights, Data, and Evaluation Harness
 
-Listed below are the frameworks, weights, and datasets used by this repo.
+Listed below are the frameworks, weights, and datasets used by this project.
 
 ### Frameworks
 
