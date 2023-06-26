@@ -2,7 +2,7 @@
 
 Lightning FPT is focused on [Lightning AI's](https://lightning.ai) LLM implementations shown below:
 
-- [Lit-Parrot](https://github.com/Lightning-AI/lit-parrot)
+- [Lit-GPT](https://github.com/Lightning-AI/lit-gpt)
 - [Lit-LLaMA](https://github.com/Lightning-AI/lit-llama)
 
 ## Frameworks, Weights, Data, and Evaluation Harness
